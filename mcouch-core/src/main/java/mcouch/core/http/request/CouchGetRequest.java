@@ -9,12 +9,13 @@ import mcouch.core.http.NotImplementedException;
 import mcouch.core.http.StandardHttpResponse;
 import mcouch.core.rhino.JavaScriptInterpreter;
 import org.apache.http.HttpResponse;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CouchGetRequest implements CouchRequest {
     private CouchURI uri;
     private JavaScriptInterpreter javaScriptInterpreter;
-    private static Logger logger = Logger.getLogger(CouchGetRequest.class);
+    private static Logger logger = LoggerFactory.getLogger(CouchGetRequest.class);
 
     public CouchGetRequest(CouchURI uri, JavaScriptInterpreter javaScriptInterpreter) {
         this.uri = uri;

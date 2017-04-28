@@ -13,12 +13,13 @@ import mcouch.core.http.response.SuccessfulDocumentCreateResponse;
 import mcouch.core.jackson.JSONSerializer;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
 public class CouchPostRequest implements CouchRequest {
-    private static Logger logger = Logger.getLogger(CouchPostRequest.class);
+    private static Logger logger = LoggerFactory.getLogger(CouchPostRequest.class);
     private HttpPost request;
     private CouchURI uri;
 

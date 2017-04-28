@@ -18,12 +18,13 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.HttpContext;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public class InMemoryCouchDb implements HttpClient {
-    private static Logger logger = Logger.getLogger(InMemoryCouchDb.class);
+    private static Logger logger = LoggerFactory.getLogger(InMemoryCouchDb.class);
     private Databases databases;
     private CouchHttpRequestFactory couchHttpRequestFactory;
 
