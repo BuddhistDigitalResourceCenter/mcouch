@@ -33,7 +33,12 @@ public class CouchGetRequest implements CouchRequest {
             return StandardHttpResponse.okWith(viewGroupDefinition.document());
         }
         if (uri.isDocRequest()) {
-            return StandardHttpResponse.okWith(database.get(uri.documentId()));
+        	String doc = database.get(uri.documentId());
+        	if (doc != null) {
+        		return StandardHttpResponse.okWith(doc);
+        	} else { 
+        		return StandardHttpResponse.DOC_NOT_FOUND;
+        	}
         }
         if (uri.isAllDocsRequest() || uri.isExecuteViewRequest()) {
             IndexQuery indexQuery = IndexQueryFactory.create(uri, javaScriptInterpreter);
