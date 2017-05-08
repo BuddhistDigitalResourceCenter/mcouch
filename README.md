@@ -27,8 +27,21 @@ With maven:
 
 ## Usage
 
+Building an HttpClient linked to the CouchDB mock:
+
 ```java
-public class InMemoryCouchDb implements HttpClient
+HttpClient couchDbClient = new InMemoryCouchDb();
+couchDbClient.createDatabase(databaseName);
+```
+
+With Ektorp:
+
+```java
+InMemoryCouchDb couchDbClient = new InMemoryCouchDb();
+couchDbClient.createDatabase(databaseName);
+StdHttpClient stdHttpClient = new StdHttpClient(couchDbClient);
+StdCouchDbInstance stdCouchDbInstance = new StdCouchDbInstance(stdHttpClient);
+return new StdCouchDbConnector(databaseName, stdCouchDbInstance);
 ```
 
 ## Change history
