@@ -1,7 +1,9 @@
 package mcouch.core.http;
 
 public class MCouchException extends RuntimeException {
-    public MCouchException(Throwable cause) {
+	private static final long serialVersionUID = 4388645513051181412L;
+
+	public MCouchException(Throwable cause) {
         super(cause);
     }
 

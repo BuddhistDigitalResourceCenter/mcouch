@@ -11,7 +11,7 @@ public class ViewDocumentsResponse {
     @JsonProperty
     private int offset;
     @JsonProperty
-    private List rows = new ArrayList();
+    private List<Object> rows = new ArrayList<Object>();
 
     public ViewDocumentsResponse(int total_rows, int offset) {
         this.total_rows = total_rows;

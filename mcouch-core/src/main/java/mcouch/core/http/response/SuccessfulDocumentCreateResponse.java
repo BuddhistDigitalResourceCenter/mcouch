@@ -4,7 +4,6 @@ public class SuccessfulDocumentCreateResponse {
     private boolean ok;
     private String id;
     private String rev;
-    private String document;
 
     public SuccessfulDocumentCreateResponse(String id, String rev) {
         this.ok = true;

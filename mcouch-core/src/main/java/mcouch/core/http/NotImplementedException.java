@@ -1,7 +1,9 @@
 package mcouch.core.http;
 
 public class NotImplementedException extends RuntimeException {
-    public NotImplementedException() {
+	private static final long serialVersionUID = 4096483018000222823L;
+
+	public NotImplementedException() {
     }
 
     public NotImplementedException(String message) {

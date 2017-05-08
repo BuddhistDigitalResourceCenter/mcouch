@@ -6,7 +6,10 @@ import org.ektorp.support.TypeDiscriminator;
 
 @TypeDiscriminator("doc.type == 'Sample'")
 public class SampleEntity extends CouchDbDocument {
-    private String type = "Sample";
+
+	private static final long serialVersionUID = 1199030245528816L;
+
+	private String type = "Sample";
     private String a;
     @JsonProperty
     private int x = 10;
