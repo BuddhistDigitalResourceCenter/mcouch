@@ -7,12 +7,16 @@
     <parent>
         <groupId>io.bdrc</groupId>
         <artifactId>mcouch</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.1.0-SNAPSHOT</version>
     </parent>
 
     <name>mcouch-core</name>
     <artifactId>mcouch-core</artifactId>
     <packaging>jar</packaging>
+
+    <properties>
+        <jackson.version>2.8.0</jackson.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -21,9 +25,19 @@
             <version>2.5</version>
         </dependency>
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-annotations</artifactId>
+          <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mozilla</groupId>

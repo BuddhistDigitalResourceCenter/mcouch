@@ -1,7 +1,7 @@
 package mcouch.core.http.response;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-import org.codehaus.jackson.annotate.JsonRawValue;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRawValue;
 
 public class ViewCustomStructureResponse {
     @JsonProperty

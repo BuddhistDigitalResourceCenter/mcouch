@@ -1,8 +1,8 @@
 package mcouch.core.http.request.body;
 
 import mcouch.core.jackson.BulkRequestDocSerializer;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.map.annotate.JsonDeserialize;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonDeserialize(using = BulkRequestDocSerializer.class)

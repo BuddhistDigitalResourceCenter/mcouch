@@ -1,6 +1,6 @@
 package mcouch.core.http.request.body;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BulkDeleteRequestDoc {
     @JsonProperty

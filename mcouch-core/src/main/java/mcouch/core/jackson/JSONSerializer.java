@@ -1,7 +1,7 @@
 package mcouch.core.jackson;
 
 import mcouch.core.http.MCouchException;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.io.StringWriter;
