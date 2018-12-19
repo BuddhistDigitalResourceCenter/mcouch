@@ -1,4 +1,4 @@
-# mCouch - in memory CouchDB mocking
+# mCouch - in memory CouchDB mocking 
 
 This package provides in memory implementation of couch db which can be used in unit testing to speed up the performance of your tests. No meant to be used for production. It supports:
 - PUT, POST, DELETE and GET of documents.
